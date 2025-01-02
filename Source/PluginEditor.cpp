@@ -25,12 +25,10 @@ DddelayyyAudioProcessorEditor::~DddelayyyAudioProcessorEditor()
 //==============================================================================
 void DddelayyyAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
-
-    g.setColour (juce::Colours::white);
-    g.setFont (juce::FontOptions (15.0f));
-    g.drawFittedText ("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
+    g.fillAll (juce::Colours::blue);        //1
+    g.setColour (juce::Colours::white);     //2
+    g.setFont (40.0f);                      //3
+    g.drawFittedText ("My First Plug-in!", getLocalBounds(), juce::Justification::centred, 1);
 }
 
 void DddelayyyAudioProcessorEditor::resized()
