@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FILTERGRAPH>
+  <FILTER uid="1" x="0.5" y="0.1" useARA="0">
+    <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="JUCE" version="1.0" file="" uniqueId="246006c0"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
+            numOutputs="2" isShell="0" hasARAExtension="0" uid="246006c0"/>
+    <STATE>0.</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="disabled"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="C"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="2" x="0.25" y="0.1" useARA="0">
+    <PLUGIN name="MIDI Input" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="JUCE" version="1.0" file="" uniqueId="a9e4f9eb"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
+            numOutputs="0" isShell="0" hasARAExtension="0" uid="a9e4f9eb"/>
+    <STATE>0.</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="disabled"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="disabled"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="3" x="0.5" y="0.9" useARA="0">
+    <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="JUCE" version="1.0" file="" uniqueId="724248cb"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="1"
+            numOutputs="0" isShell="0" hasARAExtension="0" uid="724248cb"/>
+    <STATE>0.</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="L R"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="disabled"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="4" x="0.25" y="0.9" useARA="0">
+    <PLUGIN name="MIDI Output" descriptiveName="" format="Internal" category="I/O devices"
+            manufacturer="JUCE" version="1.0" file="" uniqueId="9d5bbb00"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
+            numOutputs="0" isShell="0" hasARAExtension="0" uid="9d5bbb00"/>
+    <STATE>0.</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="disabled"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="disabled"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="6" x="0.785" y="0.6413934426229508" useARA="0" uiLastX_Normal="21"
+          uiLastY_Normal="440" uiopen_Normal="1">
+    <PLUGIN name="SPAN" format="VST3" category="Fx|Analyzer" manufacturer="Voxengo"
+            version="3.21" file="/Library/Audio/Plug-Ins/VST3/SPAN.vst3"
+            uniqueId="65d3dbf7" isInstrument="0" fileTime="18c6c4e0670" infoUpdateTime="1942744dfbe"
+            numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
+            uid="e5eceee5"/>
+    <STATE>1549.VMjLgPfA...O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9DCL2biKmETahkWVhYjKt3xLtHVLtLCMUcGVvLWZhM0PEkib4EyXgolRHM2XUsjVAo0a1HUQvoWY2.UQxImYtcESAkjRUYlVKU0b3TDR1vDYrcmVSg1P2kULqMmXCgzcEgDYtX1Rv4RMBciP1ElK2XjYDIycS4xUwbTPNQlT2vzcIcGYRQGRCEEdIcTY2Hyc4bCMk4TLNUmKtXGcGgmL1LTNHUCT0kTNIUWPrsRQ2oWNGcDMIQDQZ4lL4jidgclRjUESzzTVtjlLMY1SyPFYxYGcZAkUAsjUrYlb0oTVzj1PrYTQ40FQI4VN1bFd0Q0avIUUvMmVQUSUxAUTncEVkoTR5sjYjcjaJUmTCgFbNAmRqUWSzYlbzQiZHUGV04RTxjSZ3HzPukiZuQVQQYGNzTlRVkCLJICUVImcFMkS0YUbqoUZ5EVQqLjU1s1b5wDMlYkZM4DMpc0QS8TM2ISNmISN4UiZukUULM1Q3EVcvYULxPCUZkkLi0zbxUmM0nUVxXidZkUYOczbxUWcJEVaLUEdvQ1bLcUTZ8lb2zzYRoGaE4TMKA0bgMzRlkGRzg1Xt4jYu0VaxL0JKMCbq.SVwHyUAgmMQIGTnokXho0U2.kb5ICQLYSVEc2UhgzaSc1MxzTcncDb3gzJjQGZ4DDdzPjZ48TPvrRMwfiYLoFa1LlRvrDU1bDN2EmKAozcnUzRZciTmEWNocELqDUYmMDdhUDNqHkc4HTahAUXoQlRYQkazzDaXwzJHgVa0UmVwb1LSYGZ0oDVwXiRYAUTkQURKUVLtLUPtgiZog0YCAkMDIWaPsBVTISbUAWPJgFbXMWLQU0ZOMiMhMUb0TWL3r1Zv3TY1kFY1cDYqPWZYMjap4hVB0jUPYGVvkjPY4hLwQEcYwTPxXzRNUFcwDzQWwlVFkDMyfTMO4RUMIkUIo2Mv71Ptc0JyclX4jiQQQzbOcVQDcWZSgDN2YGN28zXEEFNMslYWomLWMjR4PkXw3lRvAiQzk2cZojTWUEVUsVUGImRiASP1XTStXCMZ4RLyokKwrjbPIGdU4lVCYzTBcDTogCNN4zXKYSYDAmVEAWQCYUL4gSLFoGNqn1LIEDb1cDY4HWTmIiX1kyJBg1aKgUZDUUVvfGaIYiKVgkTXIzP3rzS2UGZlQ1RtECUQkUL3w1RWIjb1s1PGslcB4ValAERPMWVRAWTrQyc4YCLFgGd4gEV3sVLxzlLqX1a1T1MggDbgIDLqoTdykGSgECdy0jZy0DbLYVRpIiUukUZJkkQyIWaikTcTgVRWoER4IyJsYFbzQEZMsjUwjWbwDjb1YFV0z1TFkmQMQWVwASaYwVTzcybqLWXggTcMImKzMSdOAWVQYVUVkEYTk0UxDCTwDiaBA2S3vVdWo0ZrwDbLkGSEckZIcDTqn0a3YSPrgyUFUCUVACbqU0XvgGbVEmbvAyRwUidqUEMTYUUjUVSqTzZqUVUMMGb3fmLHoDcI8zcy8lSDkicmIjV3kGTDIiKvEVaXAWSJ8jPls1TTYTXQsDMGozS3MkdIA0TnYEaYoVVjcSc3n0PYElMmUjME4DZN0DbQkWLCEFciU0crsRMgkCYRU2R4bDNZMDMiYERgYmKG0zR3QCS4AGZKEFYrsxMxL1JvMmMvXDdwLCZlEyS3rxQwvDcLkGS4kGdZcTVgEmUP0lTjMmdSYFaxoUR4gTd2X2cy0jZ0gDVmcTN2fTMOklKz4DUgYERMcGSGEidy0jZy4TcJYVdSYTdBcDL1QSUJkmUwjWbxMlUOQyMow1XVU2JOkiMHESLMwDNsAENL4VR1XDaZkVVVQUczPSSUkib1IlUlQ1PqQTT33DT4bUQpszMwEycsEzR0UGaWYEYRMSdlUWZn81L4XyTOwldicldk0lZj0DaCYFd4.mTUIFQrsRZwc1RrYDOujzPu0Fbu4VYtQmO77hUSQ0LPwVcmklaSQWXzUlO..</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="L R"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="L R"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="7" x="0.30625" y="0.6454918032786885" useARA="0" uiLastX_Normal="13"
+          uiLastY_Normal="71" uiopen_Normal="1">
+    <PLUGIN name="s(M)exoscope" format="AudioUnit" category="Effect" manufacturer="Smartelectronix"
+            version="1.0.0" file="AudioUnit:Effects/aufx,Pjfj,Manu" uniqueId="7c7e6e67"
+            isInstrument="0" fileTime="0" infoUpdateTime="1942744dfbf" numInputs="2"
+            numOutputs="2" isShell="0" hasARAExtension="0" uid="7c7e6e67"/>
+    <STATE>256.hAGaoMGcv.C1AHv.DTfAGfPBJrvDTTgEWvUag4VclE1XzUmbkIGUjEFcgwUYrUVak4Fcs3VXsU1UyUmXzkGbkckckI2bo8laTQWdvU1WP7fZ0MVYPwVcmklaSQWXzUFUtEVakIQSg4Vc.IMCM3PDQESTxD8CPDELUkjavUGcQ+fDV8TczAWczIATpYlZP.fDgUmY38DDn....7C.........+....7S2jfpO....+......................VU4FcoQGakQFBYXxJ3.DRM8EYoo1awMmc34WfH13iT9K.......P.A..........F....................HC</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="L R"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="L R"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <FILTER uid="9" x="0.4875" y="0.4162162162162162" useARA="0">
+    <PLUGIN name="dddelayyy" format="VST3" category="Fx" manufacturer="Gardi Innovation"
+            version="1.0.0" file="/Users/edmundigardi/Library/Audio/Plug-Ins/VST3/dddelayyy.vst3"
+            uniqueId="379c5755" isInstrument="0" fileTime="19423b58c15" infoUpdateTime="1942744dfbf"
+            numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
+            uid="fe27ab15"/>
+    <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="L R"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="L R"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <CONNECTION srcFilter="9" srcChannel="0" dstFilter="3" dstChannel="0"/>
+  <CONNECTION srcFilter="9" srcChannel="1" dstFilter="3" dstChannel="1"/>
+</FILTERGRAPH>
