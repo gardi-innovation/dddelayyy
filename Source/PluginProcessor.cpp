@@ -91,6 +91,20 @@ void DddelayyyAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 {
     params.prepareToPlay(sampleRate);
     params.reset();
+    
+    juce::dsp::ProcessSpec spec;
+    spec.sampleRate = sampleRate;
+    spec.maximumBlockSize = juce::uint32(samplesPerBlock);
+    spec.numChannels = 2;
+    
+    delayLine.prepare(spec);
+    
+    double numSamples = (Parameters::maxDelayTime / 1000.0) * sampleRate;
+    int maxDelayInSamples = int(std::ceil(numSamples));
+    delayLine.setMaximumDelayInSamples(maxDelayInSamples);
+    delayLine.reset();
+    
+    //DBG(maxDelayInSamples);
 }
 
 void DddelayyyAudioProcessor::releaseResources()
@@ -117,14 +131,30 @@ void DddelayyyAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[
     
     params.update();
     
+    float sampleRate = float(getSampleRate());
+    
     float* channelDataL = buffer.getWritePointer(0);
     float* channelDataR = buffer.getWritePointer(1);
     
     for (int sample = 0; sample < buffer.getNumSamples(); ++sample){
         params.smoothen();
+        float delayInSamples = (params.delayTime / 1000.0f) * sampleRate;
+        delayLine.setDelay(delayInSamples);
         
-        channelDataL[sample] *= params.gain;
-        channelDataR[sample] *= params.gain;
+        float dryL = channelDataL[sample];
+        float dryR = channelDataR[sample];
+        
+        delayLine.pushSample(0, dryL);
+        delayLine.pushSample(1, dryR);
+        
+        float wetL = delayLine.popSample(0);
+        float wetR = delayLine.popSample(1);
+        
+        float mixL = dryL + wetL * params.mix;
+        float mixR = dryR + wetR * params.mix;
+        
+        channelDataL[sample] = mixL * params.gain;
+        channelDataR[sample] = mixR * params.gain;
     }
 }
 
