@@ -8,13 +8,15 @@
     <GROUP id="{090A629C-5B4B-B3B9-1571-02B27F7D003F}" name="Source">
       <FILE id="Axzv5C" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters.cpp"/>
       <FILE id="B4Khl7" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
+      <FILE id="GCqnPh" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="SGJcRo" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       <FILE id="SpDXVY" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="JfEvMy" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="GCqnPh" name="PluginEditor.cpp" compile="1" resource="0"
-            file="Source/PluginEditor.cpp"/>
-      <FILE id="SGJcRo" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="OenPO9" name="RotaryKnob.cpp" compile="1" resource="0" file="Source/RotaryKnob.cpp"/>
+      <FILE id="xXile2" name="RotaryKnob.h" compile="0" resource="0" file="Source/RotaryKnob.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
