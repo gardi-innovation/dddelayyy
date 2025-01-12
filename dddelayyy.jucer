@@ -6,6 +6,8 @@
               pluginCode="Dlay" cppLanguageStandard="20">
   <MAINGROUP id="JvWpLY" name="dddelayyy">
     <GROUP id="{090A629C-5B4B-B3B9-1571-02B27F7D003F}" name="Source">
+      <FILE id="fthi3q" name="LookAndFeel.cpp" compile="1" resource="0" file="Source/LookAndFeel.cpp"/>
+      <FILE id="qLf1ot" name="LookAndFeel.h" compile="0" resource="0" file="Source/LookAndFeel.h"/>
       <FILE id="Axzv5C" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters.cpp"/>
       <FILE id="B4Khl7" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
       <FILE id="GCqnPh" name="PluginEditor.cpp" compile="1" resource="0"
