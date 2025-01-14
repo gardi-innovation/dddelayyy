@@ -29,6 +29,8 @@ DddelayyyAudioProcessorEditor::DddelayyyAudioProcessorEditor (DddelayyyAudioProc
     outputGroup.addAndMakeVisible(mixKnob);
     addAndMakeVisible(outputGroup);
     
+    //gainKnob.slider.setColour(juce::Slider::rotarySliderFillColourId, juce::Colours::green); // This overrides the default color of this particular knob.
+    
     setSize (500, 330);
 }
 
