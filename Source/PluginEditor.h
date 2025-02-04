@@ -32,6 +32,7 @@ private:
     RotaryKnob gainKnob { "Gain", audioProcessor.apvts, gainParamID, true };
     RotaryKnob mixKnob { "Mix", audioProcessor.apvts, mixParamID };
     RotaryKnob delayTimeKnob { "Time", audioProcessor.apvts, delayTimeParamID };
+    RotaryKnob feedbackKnob { "Feedback", audioProcessor.apvts, feedbackParamID, true };
     juce::GroupComponent delayGroup, feedbackGroup, outputGroup;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DddelayyyAudioProcessorEditor)
