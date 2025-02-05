@@ -21,6 +21,7 @@ DddelayyyAudioProcessorEditor::DddelayyyAudioProcessorEditor (DddelayyyAudioProc
     feedbackGroup.setText("Feedback");
     feedbackGroup.setTextLabelPosition(juce::Justification::horizontallyCentred);
     feedbackGroup.addAndMakeVisible(feedbackKnob);
+    feedbackGroup.addAndMakeVisible(stereoKnob);
     addAndMakeVisible(feedbackGroup);
     
     outputGroup.setText("Output");
@@ -63,4 +64,5 @@ void DddelayyyAudioProcessorEditor::resized()
     mixKnob.setTopLeftPosition(20, 20);
     gainKnob.setTopLeftPosition(mixKnob.getX(), mixKnob.getBottom() + 10);
     feedbackKnob.setTopLeftPosition(20, 20);
+    stereoKnob.setTopLeftPosition(feedbackKnob.getRight() + 20, 20);
 }

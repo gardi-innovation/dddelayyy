@@ -15,6 +15,7 @@ const juce::ParameterID gainParamID { "gain", 1};
 const juce::ParameterID delayTimeParamID { "delayTime", 1};
 const juce::ParameterID mixParamID { "mix", 1 };
 const juce::ParameterID feedbackParamID { "feedback", 1};
+const juce::ParameterID stereoParamID { "stereo", 1};
 
 class Parameters
 {
@@ -39,6 +40,9 @@ public:
     
     float feedback = 0.0f;
     
+    float panL = 0.0f;
+    float panR = 1.0f;
+    
 private:
     juce::AudioParameterFloat* gainParam;
     juce::LinearSmoothedValue<float> gainSmoother;
@@ -47,6 +51,8 @@ private:
     juce::LinearSmoothedValue<float> mixSmoother;
     juce::AudioParameterFloat* feedbackParam;
     juce::LinearSmoothedValue<float> feedbackSmoother;
+    juce::AudioParameterFloat* stereoParam;
+    juce::LinearSmoothedValue<float> stereoSmoother;
     float targetDelayTime = 0.0f;
     float coeff = 0.0f; // one-pole smooting
 };
