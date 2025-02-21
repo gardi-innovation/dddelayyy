@@ -57,9 +57,10 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     juce::AudioProcessorValueTreeState apvts { *this, nullptr, "Parameters", Parameters::createParameterLayout() };
+    
+    Parameters params;
 
 private:
-    Parameters params;
     juce::dsp::DelayLine<float, juce::dsp::DelayLineInterpolationTypes::Linear> delayLine;
     float feedbackL = 0.0f;
     float feedbackR = 0.0f;

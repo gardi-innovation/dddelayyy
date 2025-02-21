@@ -53,6 +53,8 @@ public:
     int delayNote = 0;
     bool tempoSync = false;
     
+    juce::AudioParameterBool* tempoSyncParam;
+    
 private:
     juce::AudioParameterFloat* gainParam;
     juce::LinearSmoothedValue<float> gainSmoother;
@@ -67,7 +69,6 @@ private:
     juce::LinearSmoothedValue<float> lowCutSmoother;
     juce::AudioParameterFloat* highCutParam;
     juce::LinearSmoothedValue<float> highCutSmoother;
-    juce::AudioParameterBool* tempoSyncParam;
     juce::AudioParameterChoice* delayNoteParam;
     
     
