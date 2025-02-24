@@ -11,6 +11,8 @@
       <FILE id="LfW7dl" name="Noise.png" compile="0" resource="1" file="../getting-started-book/Resources/Noise.png"/>
     </GROUP>
     <GROUP id="{090A629C-5B4B-B3B9-1571-02B27F7D003F}" name="Source">
+      <FILE id="QCTJQR" name="DelayLine.cpp" compile="1" resource="0" file="Source/DelayLine.cpp"/>
+      <FILE id="C3KNxz" name="DelayLine.h" compile="0" resource="0" file="Source/DelayLine.h"/>
       <FILE id="FmS7r7" name="DSP.h" compile="0" resource="0" file="Source/DSP.h"/>
       <FILE id="fthi3q" name="LookAndFeel.cpp" compile="1" resource="0" file="Source/LookAndFeel.cpp"/>
       <FILE id="qLf1ot" name="LookAndFeel.h" compile="0" resource="0" file="Source/LookAndFeel.h"/>
