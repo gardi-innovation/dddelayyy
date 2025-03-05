@@ -122,6 +122,9 @@ void DddelayyyAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
     
     tempo.reset();
     
+    levelL.store(0.0f);
+    levelR.store(0.0f);
+    
     //DBG(maxDelayInSamples);
 }
 
@@ -179,6 +182,9 @@ void DddelayyyAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[
     float* outputDataL = mainOutput.getWritePointer(0);
     float* outputDataR = mainOutput.getWritePointer(isMainOutputStereo ? 1 : 0);
     
+    float maxL = 0.0f;
+    float maxR = 0.0f;
+    
     if (isMainOutputStereo){
         for (int sample = 0; sample < buffer.getNumSamples(); ++sample){
             params.smoothen();
@@ -217,9 +223,21 @@ void DddelayyyAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[
             float mixL = dryL + wetL * params.mix;
             float mixR = dryR + wetR * params.mix;
             
-            outputDataL[sample] = mixL * params.gain;
-            outputDataR[sample] = mixR * params.gain;
+            //outputDataL[sample] = mixL * params.gain;
+            //outputDataR[sample] = mixR * params.gain;
+            
+            float outL = mixL * params.gain;
+            float outR = mixR * params.gain;
+            
+            outputDataL[sample] = outL;
+            outputDataR[sample] = outR;
+            
+            maxL = std::max(maxL, std::abs(outL));
+            maxR = std::max(maxR, std::abs(outR));
         }
+        
+        levelL.store(maxL);
+        levelR.store(maxR);
     }
     else {
         for (int sample = 0; sample < buffer.getNumSamples(); ++sample){
