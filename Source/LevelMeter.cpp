@@ -13,10 +13,11 @@
 #include "LookAndFeel.h"
 
 //==============================================================================
-LevelMeter::LevelMeter(std::atomic<float>& measurementL_, std::atomic<float>& measurementR_) : measurementL(measurementL_), measurementR(measurementR_), dbLevelL(clampdB), dbLevelR(clampdB)
+LevelMeter::LevelMeter(Measurement& measurementL_, Measurement& measurementR_) : measurementL(measurementL_), measurementR(measurementR_), dbLevelL(clampdB), dbLevelR(clampdB)
 {
     setOpaque(true);
-    startTimerHz(60);
+    startTimerHz(refreshRate);
+    decay = 1.0f - static_cast<float>(std::exp(-1.0f / (float(refreshRate) * 0.2)));
 }
 
 LevelMeter::~LevelMeter()
@@ -54,9 +55,8 @@ void LevelMeter::resized()
 
 void LevelMeter::timerCallback()
 {
-    //DBG("left: " << measurementL.load() << ", right: " << measurementR.load());
-    dbLevelL = juce::Decibels::gainToDecibels(measurementL.load(), clampdB);
-    dbLevelR = juce::Decibels::gainToDecibels(measurementR.load(), clampdB);
+    updateLevel(measurementL.readAndReset(), levelL, dbLevelL);
+    updateLevel(measurementR.readAndReset(), levelR, dbLevelR);
     
     repaint();
 }
@@ -73,5 +73,20 @@ void LevelMeter::drawLevel(juce::Graphics& g, float level, int x, int width)
     } else if (y < getHeight()) {
         g.setColour(Colors::LevelMeter::levelOK);
         g.fillRect(x, y, width, getHeight() - y);
+    }
+}
+
+void LevelMeter::updateLevel(float newLevel, float& smoothedLevel, float& leveldB) const
+{
+    if (newLevel > smoothedLevel) {
+        smoothedLevel = newLevel; // instantaneous attack
+    } else {
+        smoothedLevel += (newLevel - smoothedLevel) * decay;
+    }
+    
+    if (smoothedLevel > clampLevel) {
+        leveldB = juce::Decibels::gainToDecibels(smoothedLevel);
+    } else {
+        leveldB = clampdB;
     }
 }

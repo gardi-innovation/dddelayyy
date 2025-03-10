@@ -122,8 +122,8 @@ void DddelayyyAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
     
     tempo.reset();
     
-    levelL.store(0.0f);
-    levelR.store(0.0f);
+    levelL.reset();
+    levelR.reset();
     
     //DBG(maxDelayInSamples);
 }
@@ -236,8 +236,8 @@ void DddelayyyAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[
             maxR = std::max(maxR, std::abs(outR));
         }
         
-        levelL.store(maxL);
-        levelR.store(maxR);
+        levelL.updateIfGreater(maxL);
+        levelR.updateIfGreater(maxR);
     }
     else {
         for (int sample = 0; sample < buffer.getNumSamples(); ++sample){
