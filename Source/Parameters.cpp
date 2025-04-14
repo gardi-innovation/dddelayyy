@@ -239,7 +239,16 @@ void Parameters::update() noexcept
 void Parameters::smoothen() noexcept
 {
     gain = gainSmoother.getNextValue();
-    delayTime += (targetDelayTime - delayTime) * coeff;
+    
+    // No crossfade
+    //delayTime += (targetDelayTime - delayTime) * coeff;
+    
+    // Crossfade
+    //delayTime = targetDelayTime;
+    
+    // Ducking
+    delayTime = targetDelayTime;
+    
     mix = mixSmoother.getNextValue();
     feedback = feedbackSmoother.getNextValue();
     panningEqualPower(stereoSmoother.getNextValue(), panL, panR);

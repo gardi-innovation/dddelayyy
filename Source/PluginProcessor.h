@@ -66,12 +66,25 @@ public:
 
 private:
     //juce::dsp::DelayLine<float, juce::dsp::DelayLineInterpolationTypes::Linear> delayLine;
-    DelayLine delayLineL, DelayLineR;
+    DelayLine delayLineL, delayLineR;
     float feedbackL = 0.0f;
     float feedbackR = 0.0f;
     juce::dsp::StateVariableTPTFilter<float> lowCutFilter;
     juce::dsp::StateVariableTPTFilter<float> highCutFilter;
     Tempo tempo;
+//    float delayInSamples = 0.0f;    // Crossfade
+//    float targetDelay = 0.0f;       // Crossfade
+//    float xfade = 0.0f;             // Crossfade
+//    float xfadeInc = 0.0f;          // Crossfade
+
+    float delayInSamples = 0.0f;
+    float targetDelay = 0.0f;
+    float fade = 0.0f;
+    float fadeTarget = 0.0f;
+    float coeff = 0.0f;
+    float wait = 0.0f;
+    float waitInc = 0.0f;
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DddelayyyAudioProcessor)
 };
