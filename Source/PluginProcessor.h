@@ -63,6 +63,9 @@ public:
     Parameters params;
     
     Measurement levelL, levelR;
+    
+    // Bypass button
+    juce::AudioProcessorParameter* getBypassParameter() const override;
 
 private:
     //juce::dsp::DelayLine<float, juce::dsp::DelayLineInterpolationTypes::Linear> delayLine;

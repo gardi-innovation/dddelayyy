@@ -41,6 +41,17 @@ DddelayyyAudioProcessorEditor::DddelayyyAudioProcessorEditor (DddelayyyAudioProc
     tempoSyncButton.setLookAndFeel(ButtonLookAndFeel::get());
     delayGroup.addAndMakeVisible(tempoSyncButton);
     
+    auto bypassIcon = juce::ImageCache::getFromMemory(BinaryData::Bypass_png, BinaryData::Bypass_pngSize);
+    
+    bypassButton.setClickingTogglesState(true);
+    bypassButton.setBounds(0, 0, 20, 20);
+    bypassButton.setImages(false, true, true,
+                           bypassIcon, 1.0f, juce::Colours::white,
+                           bypassIcon, 1.0f, juce::Colours::white,
+                           bypassIcon, 1.0f, juce::Colours::grey,
+                           0.0f);
+    addAndMakeVisible(bypassButton);
+    
     setSize (500, 330);
     
     setLookAndFeel(&mainLF);
@@ -102,6 +113,9 @@ void DddelayyyAudioProcessorEditor::resized()
     
     // Levelmeter
     meter.setBounds(outputGroup.getWidth() - 45, 30, 30, gainKnob.getBottom() - 30);
+    
+    // Bypass Button
+    bypassButton.setTopLeftPosition(bounds.getRight() - bypassButton.getWidth() - 10, 10);
 }
 
 void DddelayyyAudioProcessorEditor::parameterValueChanged(int, float value)

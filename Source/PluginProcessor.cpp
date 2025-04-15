@@ -298,6 +298,11 @@ void DddelayyyAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[
             float outL = mixL * params.gain;
             float outR = mixR * params.gain;
             
+            if (params.bypassed) {
+                outL = dryL;
+                outR = dryR;
+            }
+            
             outputDataL[sample] = outL;
             outputDataR[sample] = outR;
             
@@ -366,4 +371,10 @@ void DddelayyyAudioProcessor::setStateInformation (const void* data, int sizeInB
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new DddelayyyAudioProcessor();
+}
+
+// Bypass Button
+juce::AudioProcessorParameter* DddelayyyAudioProcessor::getBypassParameter() const
+{
+    return params.bypassParam;
 }
