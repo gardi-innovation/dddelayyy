@@ -75,16 +75,16 @@ int DddelayyyAudioProcessor::getCurrentProgram()
     return 0;
 }
 
-void DddelayyyAudioProcessor::setCurrentProgram (int index)
+void DddelayyyAudioProcessor::setCurrentProgram ([[maybe_unused]] int index)
 {
 }
 
-const juce::String DddelayyyAudioProcessor::getProgramName (int index)
+const juce::String DddelayyyAudioProcessor::getProgramName ([[maybe_unused]] int index)
 {
     return {};
 }
 
-void DddelayyyAudioProcessor::changeProgramName (int index, const juce::String& newName)
+void DddelayyyAudioProcessor::changeProgramName ([[maybe_unused]] int index, [[maybe_unused]] const juce::String& newName)
 {
 }
 
